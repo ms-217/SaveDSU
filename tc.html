@@ -5,146 +5,30 @@
     <title>Trojan Center</title>
 
     <style>
-
-
         .css-typing {
-            border: 2px solid black;
+            border: 5px solid black;
             padding: 1%;
-            margin-top: 35%;
+            margin-top: 30%;
+            height: 170px;
         }
 
-        .css-typing p {
-            border-right: .15em solid orange;
-            font-family: "Courier";
-            font-size: 14px;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        .css-typing p:nth-child(1) {
-            width: 100em;
-            -webkit-animation: type 2s steps(40, end);
-            animation: type 2s steps(40, end);
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-        }
-
-        .css-typing p:nth-child(2) {
-            width: 100em;
-            opacity: 0;
-            -webkit-animation: type2 2s steps(40, end);
-            animation: type2 2s steps(40, end);
-            -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-        }
-
-        .css-typing p:nth-child(3) {
-            width: 7.3em;
-            opacity: 0;
-            -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
-            animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
-            -webkit-animation-delay: 4s;
-            animation-delay: 4s;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes type {
-            0% {
-                width: 0;
-            }
-            99.9% {
-                border-right: .15em solid orange;
-            }
-            100% {
-                border: none;
-            }
-        }
-
-        @-webkit-keyframes type {
-            0% {
-                width: 0;
-            }
-            99.9% {
-                border-right: .15em solid orange;
-            }
-            100% {
-                border: none;
-            }
-        }
-
-        @keyframes type2 {
-            0% {
-                width: 0;
-            }
-            1% {
-                opacity: 1;
-            }
-            99.9% {
-                border-right: .15em solid orange;
-            }
-            100% {
-                opacity: 1;
-                border: none;
-            }
-        }
-
-        @-webkit-keyframes type2 {
-            0% {
-                width: 0;
-            }
-            1% {
-                opacity: 1;
-            }
-            99.9% {
-                border-right: .15em solid orange;
-            }
-            100% {
-                opacity: 1;
-                border: none;
-            }
-        }
-
-        @keyframes type3 {
-            0% {
-                width: 0;
-            }
-            1% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @-webkit-keyframes type3 {
-            0% {
-                width: 0;
-            }
-            1% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
-        }
-        @-webkit-keyframes blink {
-            50% {
-                border-color: tranparent;
-            }
+        p {
+            font-size: 24px;
         }
     </style>
 
     <script>
-        function changeNext() {
-            this.document.getElementById("storyText").innerText = "";
+        //The array that contains the texts. Each new box is a new element, ie. each new box is separated by a comma
+        var texts = ["You dart into the TC seeing students cowering in the study rooms and fleeing to the underground. You sneak into Sodexo and see only two options not completely covered in pepper.",
+                    "Some test text"];
+
+        var i = 0;
+
+        function nextText() {
+            if (i < texts.length) {
+                document.getElementById("p1").innerText = texts[i];
+                i++;
+            }
         }
     </script>
 
@@ -153,12 +37,11 @@
 
 <a href="map.html"><button id="backBtn">Back to Map</button></a>
 
-<div class="css-typing">
-    <p>You dart into the TC seeing students cowering in the study rooms and fleeing to the underground.</p>
-    <p>You sneak into Sodexo and see only two options not completely covered in pepper. </p>
+<div class="css-typing" id="txtBox">
+    <p id="p1"></p>
 </div>
 
-<button id="nxtBtn" onclick="changeNext();">Next</button>
+<button id="nxtBtn" onclick="nextText();">Next</button>
 
 </body>
 </html>
