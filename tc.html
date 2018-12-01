@@ -18,13 +18,18 @@
     </style>
 
     <script>
-        //The array that contains the texts. Each new box is a new element, ie. each new box is separated by a comma
         var texts = ["You dart into the TC seeing students cowering in the study rooms and fleeing to the underground. You sneak into Sodexo and see only two options not completely covered in pepper.",
-                    "Some test text"];
+            "Some test text", "Testing the text", "more text"];
 
-        var i = 0;
+        var i = 1;
+
+        function loadText() {
+            //The array that contains the texts. Each new box is a new element, ie. each new box is separated by a comma
+            document.getElementById("p1").innerText = texts[0];
+        }
 
         function nextText() {
+
             if (i < texts.length) {
                 document.getElementById("p1").innerText = texts[i];
                 i++;
@@ -33,9 +38,7 @@
     </script>
 
 </head>
-<body>
-
-<a href="map.html"><button id="backBtn">Back to Map</button></a>
+<body onload="loadText();">
 
 <div class="css-typing" id="txtBox">
     <p id="p1"></p>
