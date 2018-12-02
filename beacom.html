@@ -2,11 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Beacom</title>
+    <title>Trojan Center</title>
+
+    <style>
+        body {
+            background: url("Pictures/TrojanCenter.jpg") no-repeat;
+            background-size: 100vw, 100vh;
+        }
+
+        .css-typing {
+            border: 5px solid black;
+            padding: 1%;
+            margin-top: 30%;
+            height: 170px;
+            background-color: white;
+
+        }
+
+        p {
+            font-size: 24px;
+        }
+    </style>
+
+    <script>
+        var texts = ["Thank goodness you came. Tom is upstairs, infected. He has been eating all the cyber corps students. You are our last hope, he has eaten everyone else we sent up. She hands you one last vial of the cure. Best of luck."];
+
+        var i = 1;
+
+        function loadText() {
+            //The array that contains the texts. Each new box is a new element, ie. each new box is separated by a comma
+            document.getElementById("p1").innerText = texts[0];
+        }
+
+        function nextText() {
+
+            if (i < texts.length) {
+                document.getElementById("p1").innerText = texts[i];
+                i++;
+            }
+        }
+
+
+
+    </script>
+
 </head>
-<body>
+<body onload="loadText();">
 
-<a href="map.html"><button id="backBtn">Back to Map</button></a>
+<div class="css-typing" id="txtBox">
+    <p id="p1"></p>
+</div>
 
+<button onclick="location.href='tom1.html'">Next</button>
 </body>
-</html>
+</html>​
