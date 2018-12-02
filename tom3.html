@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Tom Question 3</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>Trojan Center</title>
 
     <style>
@@ -16,6 +23,7 @@
             margin-top: 30%;
             height: 170px;
             background-color: white;
+
         }
 
         p {
@@ -24,8 +32,7 @@
     </style>
 
     <script>
-        var texts = ["You dart into the TC seeing students cowering in the study rooms and fleeing to the underground. You sneak into Sodexo and see only two options not completely covered in pepper.",
-            "Some test text", "Testing the text", "more text"];
+        var texts = ["Can you explode the whole pie?"];
 
         var i = 1;
 
@@ -40,9 +47,23 @@
                 document.getElementById("p1").innerText = texts[i];
                 i++;
             }
-
-
         }
+        function quest()
+        {
+            var ans = (document.getElementById("ans").value);
+
+
+            if (ans === "No")
+            {
+                location.href = "tom4.html"
+            }
+            else
+            {
+                location.href="YouDied.html"
+            }
+        }
+
+
     </script>
 
 </head>
@@ -51,8 +72,15 @@
 <div class="css-typing" id="txtBox">
     <p id="p1"></p>
 </div>
-
-<button id="nxtBtn" onclick="nextText();">Next</button>
-
+<main>
+    <br>
+    <label id="for">Answer</label>
+    <input type="text" id="ans">
+    <span>*</span><br>
+    <br>
+</main>
+<button onclick="quest()">Next</button>
+</body>
+</html>​
 </body>
 </html>

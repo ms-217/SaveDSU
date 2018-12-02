@@ -16,6 +16,7 @@
             margin-top: 30%;
             height: 170px;
             background-color: white;
+
         }
 
         p {
@@ -24,8 +25,12 @@
     </style>
 
     <script>
-        var texts = ["You dart into the TC seeing students cowering in the study rooms and fleeing to the underground. You sneak into Sodexo and see only two options not completely covered in pepper.",
-            "Some test text", "Testing the text", "more text"];
+        var texts = ["The expression of mild disappointment never leaves Tom’s face but the room seems to brighten as the cure splashes across his face. Gaylor crashes through the window three more vials strapped to his chest before seeing Tom and turning to you.",
+        '"Well done my fellow Chem Nerd." Says Gaylor.',
+        "Pauli enters room and cheers.",
+        '“I think this student has earned the cyber corps scholarship.” Says Tom.',
+        '“That sounds like a fitting reward.” Pauli agrees.',
+        '“K, Good, Awesome” Tom nods and leaves.'];
 
         var i = 1;
 
@@ -40,9 +45,10 @@
                 document.getElementById("p1").innerText = texts[i];
                 i++;
             }
-
-
         }
+
+
+
     </script>
 
 </head>
@@ -52,7 +58,6 @@
     <p id="p1"></p>
 </div>
 
-<button id="nxtBtn" onclick="nextText();">Next</button>
-
+<button onclick="nextText()">Next</button>
 </body>
-</html>
+</html>​
